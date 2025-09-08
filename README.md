@@ -1,25 +1,77 @@
-# TFT Snowflake Project
+# 🎮 TFT Snowflake Project
 
-## 📌 Overview
-This project analyzes **Teamfight Tactics (TFT)** match data (Platinum → Challenger) using **Snowflake SQL**.  
-We build a Snowflake data pipeline that stages raw CSV files, loads them into structured tables, and runs queries on placements, comps, and champions.
+This project analyzes **Teamfight Tactics (TFT) ranked match data** using **Snowflake SQL** for data processing and **Power BI** for visualization.  
+It demonstrates how to design an end-to-end data pipeline: **data ingestion → transformation → analytics → dashboarding**.
 
-## ⚙️ Tech Stack
-- Snowflake (staging, file formats, VARIANT JSON parsing)
-- SQL (ETL + analytics)
-- GitHub (version control via Snowflake Git integration)
+---
 
-## 📂 Repo Structure
-- `sql/01_create_database.sql` → Create database  
-- `sql/02_create_schema.sql` → Create schema  
-- `sql/03_create_warehouse.sql` → Create warehouse  
-- `sql/04_create_stage.sql` → Create internal stage  
-- `sql/05_create_file_format.sql` → Define CSV file format  
-- `sql/06_create_table.sql` → Define matches table schema  
-- `sql/07_copy_into.sql` → Load data from staged CSVs  
-- `sql/08_analysis_queries.sql` → Validation & analysis queries  
+## 📂 Repository Structure
 
-## 🚀 How to Run
-1. Upload CSVs (`Platinum`, `Diamond`, `Master`, `GrandMaster`, `Challenger`) to stage:
-   ```sql
-   PUT file://<local_path>/TFT_Platinum_MatchData.csv @tft_stage;
+
+tft-snowflake/
+│
+├── sql/ # SQL scripts for Snowflake
+│ ├── 01_create_database.sql
+│ ├── 02_create_schema.sql
+│ ├── 03_create_stage.sql
+│ ├── 04_create_file_format.sql
+│ ├── 05_create_tables.sql
+│ ├── 06_copy_into.sql
+│ └── 07_analysis_queries.sql
+│
+├── powerbi_dashboard/ # Power BI files and screenshots
+│ ├── TFT_Dashboard.pbix
+│ ├── Screenshots/
+│ │ ├── overview.png
+│ │ ├── traits.png
+│ │ └── top10traits.png
+│ └── README.md
+│
+├── TFT_CSV_DATA.zip # Raw CSV datasets
+├── .gitignore
+└── README.md # Project overview (this file)
+
+
+---
+
+## 🛠 Setup Instructions
+
+### 1. Snowflake Setup
+Run the SQL scripts in order (01 → 07) to:  
+- Create the database, schema, and warehouse  
+- Define stages & file formats  
+- Load CSV match data  
+- Build analysis queries & views  
+
+### 2. Power BI Dashboard
+- Open `powerbi_dashboard/TFT_Dashboard.pbix`  
+- Update the Snowflake connection (URL, warehouse, DB, schema)  
+- Refresh to load data  
+
+---
+
+## 📊 Dashboard Preview
+
+### Overview
+![Overview](powerbi_dashboard/Screenshots/Dashboard.png)
+
+---
+
+## 🔎 Analysis Highlights
+- **Avg Placement, Level, and Game Duration** KPIs  
+- **Placement distribution across tiers** (Platinum → Challenger)  
+- **Comp Score vs Placement** (relationship between comp strength & rank outcome)  
+- **Trait effectiveness** (which traits correlate with better results)  
+- **Top 10 Traits by Win Rate**  
+
+---
+
+## 🚀 Tech Stack
+- **Snowflake** (Data warehouse & SQL processing)  
+- **Power BI** (Visualization & dashboarding)  
+- **GitHub** (Version control & project sharing)  
+
+---
+
+💡 *This project shows how advanced analytics and visualization can be applied to competitive gaming data, combining data engineering and BI for actionable insights.*
+

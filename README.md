@@ -1,11 +1,11 @@
-# 🎮 TFT Snowflake Project
+# TFT Snowflake Project
 
 This project analyzes **Teamfight Tactics (TFT) ranked match data** using **Snowflake SQL** for data processing and **Power BI** for visualization.  
 It demonstrates how to design an end-to-end data pipeline: **data ingestion → transformation → analytics → dashboarding**.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 
 tft-snowflake/
@@ -50,14 +50,14 @@ Run the SQL scripts in order (01 → 07) to:
 
 ---
 
-## 📊 Dashboard Preview
+### Dashboard Preview
 
-### Overview
+Overview
 ![Overview](powerbi_dashboard/Screenshots/Dashboard.png)
 
 ---
 
-## 🔎 Analysis Highlights
+Analysis Highlights
 - **Avg Placement, Level, and Game Duration** KPIs  
 - **Placement distribution across tiers** (Platinum → Challenger)  
 - **Comp Score vs Placement** (relationship between comp strength & rank outcome)  
@@ -66,12 +66,7 @@ Run the SQL scripts in order (01 → 07) to:
 
 ---
 
-## 🚀 Tech Stack
+Tech Stack
 - **Snowflake** (Data warehouse & SQL processing)  
 - **Power BI** (Visualization & dashboarding)  
 - **GitHub** (Version control & project sharing)  
-
----
-
-💡 *This project shows how advanced analytics and visualization can be applied to competitive gaming data, combining data engineering and BI for actionable insights.*
-

@@ -36,7 +36,3 @@ The dashboard connects to Snowflake, queries the ranked match data, and visualiz
 - Trait Effectiveness Ranking  
 - Top 10 Traits by Win Rate  
 - Game Duration Trends  
-
----
-
-💡 *This dashboard is designed to complement the Snowflake SQL analysis and provide a clear, visual summary of gameplay trends across different tiers in Teamfight Tactics.*

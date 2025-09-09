@@ -7,29 +7,27 @@ It demonstrates how to design an end-to-end data pipeline: **data ingestion → 
 
 ## Repository Structure
 
+## 📂 Repository Structure
 
-tft-snowflake/
-│
-├── sql/ # SQL scripts for Snowflake
-│ ├── 01_create_database.sql
-│ ├── 02_create_schema.sql
-│ ├── 03_create_stage.sql
-│ ├── 04_create_file_format.sql
-│ ├── 05_create_tables.sql
-│ ├── 06_copy_into.sql
-│ └── 07_analysis_queries.sql
-│
-├── powerbi_dashboard/ # Power BI files and screenshots
-│ ├── TFT_Dashboard.pbix
-│ ├── Screenshots/
-│ │ ├── overview.png
-│ │ ├── traits.png
-│ │ └── top10traits.png
-│ └── README.md
-│
-├── TFT_CSV_DATA.zip # Raw CSV datasets
-├── .gitignore
-└── README.md # Project overview (this file)
+**tft-snowflake/**
+- **sql/** – SQL scripts for Snowflake  
+  - 01_create_database.sql  
+  - 02_create_schema.sql  
+  - 03_create_stage.sql  
+  - 04_create_file_format.sql  
+  - 05_create_tables.sql  
+  - 06_copy_into.sql  
+  - 07_analysis_queries.sql  
+- **powerbi_dashboard/** – Power BI files and screenshots  
+  - TFT_Dashboard.pbix  
+  - **Screenshots/**  
+    - overview.png  
+    - traits.png  
+    - top10traits.png  
+  - README.md  
+- **TFT_CSV_DATA.zip** – Raw CSV datasets  
+- **.gitignore**  
+- **README.md** – Project overview (this file)  
 
 ---
 

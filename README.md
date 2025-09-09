@@ -31,7 +31,6 @@ tft-snowflake/
 ├── .gitignore
 └── README.md # Project overview (this file)
 
-
 ---
 
 ## 🛠 Setup Instructions
